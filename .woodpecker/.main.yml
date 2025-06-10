@@ -2,8 +2,6 @@ steps:
   run-hello-world:
     image: nestybox/ubuntu-jammy-systemd:latest
     commands:
-      - dockerd &
-      - sleep 30
       - docker run hello-world
     backend_options:
       docker:
