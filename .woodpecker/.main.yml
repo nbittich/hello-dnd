@@ -2,7 +2,7 @@ steps:
   run-hello-world:
     image: docker:27
     commands:
-      - dockerd --iptables=true &
+      - dockerd &
       - sleep 30
       - docker run hello-world
     backend_options:
