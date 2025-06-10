@@ -2,7 +2,7 @@ steps:
   run-hello-world:
     image: docker:latest
     commands:
-      - dockerd &
+      - dockerd --iptables=true --storage-driver=overlay2 &
       - sleep 30
       - docker run hello-world
     backend_options:
