@@ -1,10 +1,11 @@
 steps:
   run-hello-world:
-    image: nestybox/ubuntu-jammy-systemd-docker
+    image: docker:latest
     commands:
-      - dockerd && docker run hello-world
-    backend_options:
-      runtime: sysbox-runc
+      - dockerd &
+      - docker run hello-world
+    # backend_options:
+    runtime: sysbox-runc
 when:
   - event: push
     branch: master
