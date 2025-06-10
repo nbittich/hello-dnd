@@ -2,7 +2,7 @@ steps:
   run-hello-world:
     image: docker:latest
     commands:
-      - docker run hello-world
+      - dockerd && docker run hello-world
     backend_options:
       runtime: sysbox-runc
 when:
