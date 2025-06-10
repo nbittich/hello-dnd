@@ -1,7 +1,6 @@
 steps:
   setup-dind:
     image: docker:dind
-    privileged: true
     commands:
       - dockerd && sleep 10
   run-hello-world:
