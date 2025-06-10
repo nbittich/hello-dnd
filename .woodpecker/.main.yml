@@ -6,7 +6,8 @@ steps:
       - sleep 30
       - docker run hello-world
     backend_options:
-      runtime: sysbox-runc
+      docker:
+        runtime: sysbox-runc
 when:
   - event: push
     branch: master
