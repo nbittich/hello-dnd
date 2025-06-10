@@ -8,6 +8,7 @@ steps:
     backend_options:
       docker:
         runtime: sysbox-runc
+        hostname: syscont
 when:
   - event: push
     branch: master
