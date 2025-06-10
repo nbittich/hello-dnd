@@ -1,6 +1,6 @@
 steps:
   run-hello-world:
-    image: nestybox/ubuntu-jammy-systemd:latest
+    image: nestybox/ubuntu-jammy-systemd-docker:latest
     commands:
       - docker run hello-world
     backend_options:
