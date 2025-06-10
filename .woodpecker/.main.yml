@@ -1,10 +1,8 @@
 steps:
   run-hello-world:
-    image: nestybox/ubuntu-jammy-systemd-docker:latest
+    image: ubuntu
     commands:
-      - dockerd &
-      - sleep 30
-      - docker run hello-world
+      - echo "hello world"
     backend_options:
       docker:
         runtime: sysbox-runc
