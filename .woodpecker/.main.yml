@@ -1,6 +1,6 @@
 steps:
   run-hello-world:
-    image: docker:27
+    image: nestybox/ubuntu-jammy-systemd:latest
     commands:
       - dockerd &
       - sleep 30
