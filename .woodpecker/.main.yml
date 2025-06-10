@@ -3,9 +3,10 @@ steps:
     image: docker:latest
     commands:
       - dockerd &
+      - sleep 30
       - docker run hello-world
-    # backend_options:
-    runtime: sysbox-runc
+    backend_options:
+      runtime: sysbox-runc
 when:
   - event: push
     branch: master
