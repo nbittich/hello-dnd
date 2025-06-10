@@ -1,0 +1,15 @@
+steps:
+  setup-dind:
+    image: docker:dind
+    privileged: true
+    commands:
+      - dockerd && sleep 10
+  run-hello-world:
+    image: docker:latest
+    commands:
+      - docker run hello-world
+    backend_options:
+      runtime: sysbox-runc
+when:
+  - event: push
+    branch: master
