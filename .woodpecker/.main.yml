@@ -1,8 +1,4 @@
 steps:
-  setup-dind:
-    image: docker:dind
-    commands:
-      - dockerd && sleep 10
   run-hello-world:
     image: docker:latest
     commands:
