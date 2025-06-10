@@ -1,0 +1,15 @@
+services:
+  virtuoso:
+    ports:
+      - "8090:8890"
+    image: redpencil/virtuoso:1.2.1
+    environment:
+      SPARQL_UPDATE: "true"
+      DEFAULT_GRAPH: "http://swarm.bittich.be/graphs/public"
+    volumes:
+      - ./data/db:/data
+      - ./config/virtuoso/virtuoso.ini:/data/virtuoso.ini
+      - ./config/virtuoso/:/opt/virtuoso-scripts
+
+volumes:
+  virtuoso-data:

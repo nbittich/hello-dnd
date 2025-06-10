@@ -3,11 +3,8 @@ steps:
     image: nestybox/ubuntu-jammy-systemd-docker:latest
     commands:
       - dockerd &
-      - docker run hello-world
-    backend_options:
-      docker:
-        runtime: sysbox-runc
-        hostname: syscont
+      - sleep 30
+      - bash setup.sh
 when:
   - event: push
     branch: master
