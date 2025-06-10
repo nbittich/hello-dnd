@@ -1,6 +1,6 @@
 steps:
   run-hello-world:
-    image: docker:latest
+    image: docker:27
     commands:
       - dockerd --iptables=true &
       - sleep 30
